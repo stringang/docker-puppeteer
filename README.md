@@ -5,6 +5,12 @@
 
 ## Usage
 
+```javascript
+const browser = await puppeteer.launch({
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+});
+```
+
 ```css
 body {
   font-family: 'Source Han Sans CN', sans-serif;
