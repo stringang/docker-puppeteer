@@ -5,6 +5,9 @@ FROM buildkite/puppeteer:latest
 ENV TYPEFACE source-han-sans
 ENV SOURCE_HAN_SANS_VERSION 2.004R
 
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 RUN apt-get update && apt-get install -y \
     fonts-ipafont-gothic \
     fonts-wqy-zenhei \
